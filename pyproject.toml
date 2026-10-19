@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "equity-signals"
+version = "0.1.0"
+description = "Cross sectional equity signals from daily prices, volume, market value and analyst ratings"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.23", "pandas>=1.5"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["equity_signals*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
